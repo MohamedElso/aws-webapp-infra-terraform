@@ -50,7 +50,7 @@
 
   <!-- CloudWatch -->
   <rect x="650" y="530" width="200" height="60" fill="#CCAAFF" stroke="#333" stroke-width="2"/>
-  <text x="660" y="565">CloudWatch Logs & Metrics</text>
+  <text x="660" y="565">CloudWatch Logs &amp; Metrics</text>
 
   <!-- IAM -->
   <rect x="900" y="380" width="200" height="60" fill="#CCCCCC" stroke="#333" stroke-width="2"/>
@@ -58,18 +58,4 @@
 
   <!-- Route53 -->
   <rect x="650" y="100" width="200" height="60" fill="#FFAACC" stroke="#333" stroke-width="2"/>
-  <text x="660" y="135">Route53 (Optional)</text>
-
-  <!-- Arrows -->
-  <line x1="250" y1="130" x2="250" y2="240" class="line"/>
-  <line x1="320" y1="300" x2="320" y2="530" class="line"/>
-  <line x1="320" y1="590" x2="320" y2="610" class="line"/>
-  <line x1="420" y1="270" x2="650" y2="270" class="line"/>
-  <line x1="420" y1="560" x2="650" y2="560" class="line"/>
-  <line x1="850" y1="400" x2="900" y2="400" class="line"/>
-  <line x1="750" y1="160" x2="750" y2="240" class="line"/>
-
-  <!-- Internet users label -->
-  <text x="200" y="80" font-size="16" fill="#333">Internet Users</text>
-  <line x1="250" y1="80" x2="250" y2="100" class="line"/>
-</svg>
+  <text x="660" y="135">Route53 (Opt
