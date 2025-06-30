@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="900" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+  <style>
+    .box { fill: #f2f2f2; stroke: #333; stroke-width: 2; }
+    .title { font-weight: bold; }
+    .line { stroke: #333; stroke-width: 2; marker-end: url(#arrow); }
+  </style>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333" />
+    </marker>
+  </defs>
+
+  <!-- VPC boundary -->
+  <rect x="50" y="50" width="1100" height="780" fill="none" stroke="#0052CC" stroke-width="4" stroke-dasharray="10,10"/>
+  <text x="60" y="40" class="title" fill="#0052CC">VPC (us-east-1)</text>
+
+  <!-- Public Subnets -->
+  <rect x="100" y="100" width="450" height="300" class="box"/>
+  <text x="110" y="120" class="title">Public Subnets</text>
+
+  <!-- Internet Gateway -->
+  <rect x="150" y="160" width="200" height="50" fill="#FFEE88" stroke="#333" stroke-width="2"/>
+  <text x="160" y="190">Internet Gateway</text>
+
+  <!-- NAT Gateway -->
+  <rect x="380" y="160" width="150" height="50" fill="#FFDD55" stroke="#333" stroke-width="2"/>
+  <text x="390" y="190">NAT Gateway</text>
+
+  <!-- ALB -->
+  <rect x="220" y="240" width="200" height="60" fill="#88CCFF" stroke="#333" stroke-width="2"/>
+  <text x="230" y="275">Application Load Balancer</text>
+
+  <!-- Private Subnets -->
+  <rect x="100" y="450" width="450" height="300" class="box"/>
+  <text x="110" y="470" class="title">Private Subnets</text>
+
+  <!-- ECS Service -->
+  <rect x="220" y="530" width="200" height="60" fill="#AAFFAA" stroke="#333" stroke-width="2"/>
+  <text x="230" y="565">ECS Fargate Service</text>
+
+  <!-- ECS Tasks -->
+  <rect x="240" y="610" width="160" height="40" fill="#66DD66" stroke="#333" stroke-width="2"/>
+  <text x="250" y="635">Fargate Tasks</text>
+
+  <!-- ACM -->
+  <rect x="650" y="240" width="200" height="60" fill="#FFAAAA" stroke="#333" stroke-width="2"/>
+  <text x="660" y="275">ACM Certificate</text>
+
+  <!-- CloudWatch -->
+  <rect x="650" y="530" width="200" height="60" fill="#CCAAFF" stroke="#333" stroke-width="2"/>
+  <text x="660" y="565">CloudWatch Logs &amp; Metrics</text>
+
+  <!-- IAM -->
+  <rect x="900" y="380" width="200" height="60" fill="#CCCCCC" stroke="#333" stroke-width="2"/>
+  <text x="910" y="415">IAM Roles</text>
+
+  <!-- Route53 -->
+  <rect x="650" y="100" width="200" height="60" fill="#FFAACC" stroke="#333" stroke-width="2"/>
+  <text x="660" y="135">Route53 (Opt
+
+---
+
+## ➤ Modules
+
+Below is **complete code** for each module.
+
+---
+
+### ✅ modules/vpc
+
+**`modules/vpc/variables.tf`**
+
+```hcl
+variable "name" {}
+variable "vpc_cidr" {}
+variable "azs" { type = list(string) }
+variable "public_subnets" { type = list(string) }
+variable "private_subnets" { type = list(string) }
+variable "enable_nat_gateway" { type = bool }
+variable "single_nat_gateway" { type = bool }
+variable "tags" { type = map(string) }
