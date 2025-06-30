@@ -59,3 +59,25 @@
   <!-- Route53 -->
   <rect x="650" y="100" width="200" height="60" fill="#FFAACC" stroke="#333" stroke-width="2"/>
   <text x="660" y="135">Route53 (Opt
+
+---
+
+## ➤ Modules
+
+Below is **complete code** for each module.
+
+---
+
+### ✅ modules/vpc
+
+**`modules/vpc/variables.tf`**
+
+```hcl
+variable "name" {}
+variable "vpc_cidr" {}
+variable "azs" { type = list(string) }
+variable "public_subnets" { type = list(string) }
+variable "private_subnets" { type = list(string) }
+variable "enable_nat_gateway" { type = bool }
+variable "single_nat_gateway" { type = bool }
+variable "tags" { type = map(string) }
