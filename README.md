@@ -17,14 +17,15 @@ See the architecture diagram:
 1. Pick your environment (e.g. `environments/dev`)
 2. Edit variables in `terraform.tfvars`
 3. Run:
-    terraform init
-    terraform plan
-    terraform apply
+    -  terraform init
+    -  terraform plan
+    -  terraform apply
 
 Outputs include ALB DNS name and ECS cluster info.
 
 ## Full Repo Layout
 
+```text
 terraform-ecs-fargate/
 ├── README.md
 ├── docs/
@@ -48,23 +49,6 @@ terraform-ecs-fargate/
 │   │   └── outputs.tf
 │   ├── ecs_task_definition/
 │   │   ├── main.tf
-│   │   ├── variables.tf
-│   │   └── outputs.tf
-│   ├── ecs_service/
-│   │   ├── main.tf
-│   │   ├── variables.tf
-│   │   └── outputs.tf
-│   └── iam_roles/
-│       ├── main.tf
-│       ├── variables.tf
-│       └── outputs.tf
-└── environments/
-    ├── dev/
-    │   ├── main.tf
-    │   ├── terraform.tfvars
-    │   └── backend.tf
-    └── prod/
-        ├── main.tf
-        ├── terraform.tfvars
-        └── backend.tf
+```
+
 
