@@ -58,7 +58,8 @@
 
   <!-- Route53 -->
   <rect x="650" y="100" width="200" height="60" fill="#FFAACC" stroke="#333" stroke-width="2"/>
-  <text x="660" y="135">Route53 (Opt
+  <text x="660" y="135">Route53 (Optional)</text>
+  </svg>
 
 ---
 
